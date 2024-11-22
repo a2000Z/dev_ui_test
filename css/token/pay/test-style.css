@@ -1,0 +1,201 @@
+/*body {*/
+/*  font-family: Arial, sans-serif;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  box-sizing: border-box;*/
+/*}*/
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*body {*/
+/*  font-family: Arial, sans-serif;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  height: 100vh;*/
+/*  background-color: #f0f0f0;*/
+/*}*/
+
+.container {
+  padding: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-info, .payment-info {
+  margin-bottom: 20px;
+}
+
+.product-info > div,  .payment-info {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#amount {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#pay-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#pay-button:hover {
+  background-color: #0056b3;
+}
+
+.card-slider {
+  display: flex;
+  overflow-x: auto;
+}
+
+.card-slider-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.card-slide {
+  transition: transform 0.5s ease; /* 슬라이드 애니메이션 */
+}
+
+.card-slide.selected {
+  /*border: 2px solid blue; !* 선택된 카드 강조 *!*/
+  border: 2px solid #00a3cc; /* 선택된 카드 강조 */
+}
+
+/*#card-slider {*/
+/*  white-space: nowrap;*/
+/*  overflow: hidden;*/
+/*  width: calc(100% / 3 * 3); !* 한 번에 보이는 슬라이드 개수에 맞춰서 조정 *!*/
+/*  flex: 1;*/
+/*}*/
+
+/*#card-slider > .card-slide {*/
+/*  width: calc(100% / 3); !* 한 번에 보이는 슬라이드 개수에 맞춰서 조정 *!*/
+/*}*/
+
+#card-slider {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%; /* 슬라이더 전체 폭을 차지 */
+  flex: 1;
+}
+
+#card-slider > .card-slide {
+  width: calc(100% / 1); /* 한 번에 보이는 슬라이드 개수에 맞춰서 조정 */
+  box-sizing: border-box; /* 패딩과 보더 포함하여 크기 조정 */
+}
+
+#card-slider > .card-slide img {
+  width: 250px;
+  height: auto;
+  /*width: 100%;*/
+  /*height: auto; !* 이미지가 부모 요소에 맞춰지도록 조정 *!*/
+  display: block; /* 이미지 하단의 공백 제거 */
+}
+
+
+.slide-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  width: 30px; /* 버튼 너비 조정 */
+  height: 100px; /* 버튼 높이 조정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-button:hover {
+  background-color: #e0e0e0;
+}
+
+.left-button {
+  margin-right: 10px; /* 왼쪽 버튼 오른쪽 마진 */
+}
+
+.right-button {
+  margin-left: 10px; /* 오른쪽 버튼 왼쪽 마진 */
+}
+
+
+
+
+/*.card-slide {*/
+/*  flex: 0 0 auto;*/
+/*  width: 100px;*/
+/*  margin-right: 10px;*/
+/*}*/
+
+.card-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-selector, .payment-info {
+  margin-bottom: 15px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.card-selector::-webkit-scrollbar, .payment-info::-webkit-scrollbar {
+  display: none;
+}
+
+.card-selector > div, .payment-info > div {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  scroll-snap-align: start;
+}
+
+/*.card-slide.selected {*/
+/*  border: 2px solid blue; !* 선택된 카드 강조 *!*/
+/*}*/
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #0056b3, #00a3cc);
+}

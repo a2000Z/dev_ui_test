@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>결제 앱</title>
+  <link rel="stylesheet" href="/css/token/pay/test-style.css">
+</head>
+<body>
+<div class="container">
+  <h1>결제 정보</h1>
+
+  <div class="product-info">
+    <div class="product-name">
+      <label for="productName">상품 명:</label>
+      <span id="productName">샘플 상품</span>
+    </div>
+    <div class="product-price">
+      <label for="productPrice">상품 가격:</label>
+      <span id="productPrice">₩10,000</span>
+    </div>
+    <div class="store-name">
+      <label for="storeName">판매점 명:</label>
+      <span id="storeName">샘플 판매점</span>
+    </div>
+  </div>
+
+
+  <div class="card-selector">
+    <label for="card">카드 선택:</label>
+    <div class="card-slider-wrapper">
+      <button class="slide-button left-button" id="slide-left-btn">&lt;</button>
+      <div class="card-slider" id="card-slider">
+        <div class="card-slide" data-value="card1">
+          <img src="/img/card/03457_img.png" alt="카드 1">
+        </div>
+        <div class="card-slide" data-value="card2">
+          <img src="/img/card/04650_img.png" alt="카드 2">
+        </div>
+        <div class="card-slide" data-value="card3">
+          <img src="/img/card/04921_img.png" alt="카드 3">
+        </div>
+        <div class="card-slide" data-value="card4">
+          <img src="/img/card/04982_img.png" alt="카드 4">
+        </div>
+        <div class="card-slide" data-value="card5">
+          <img src="/img/card/03300_img.png" alt="카드 5">
+        </div>
+      </div>
+      <button class="slide-button right-button" id="slide-right-btn">&gt;</button>
+    </div>
+    <input type="hidden" id="card" name="card">
+  </div>
+
+  <div class="payment-info">
+    <label for="amount">금액:</label>
+    <input type="text" id="amount" name="amount">
+  </div>
+  <button id="pay-button">결제</button>
+</div>
+<script src="../js/tokenPayInfo.js"></script>
+</body>
+</html>
